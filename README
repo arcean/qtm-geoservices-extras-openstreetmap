@@ -1,0 +1,43 @@
+OpenStreetMap (openstreetmap)
+============================
+
+API
+---
+OpenStreetMap creates and provides free geographic data such as street maps to anyone who wants them.
+The project was started because most maps you think of as free actually have legal or technical
+restrictions on their use, holding back people from using them in creative, productive, or unexpected ways.
+
+http://openstreetmap.org/
+http://wiki.openstreetmap.org/wiki/Tiles
+
+Parameters
+----------
+ mapping.servers:
+	type:		QString / QStringList
+	default:	http://tile.openstreetmap.org/
+	description:    openstreetmap tile server(s)
+			if a list is specified, the manager will used
+			round robin to balance request between servers.
+			The trailing slash is *needed*.
+			Examples:
+			 Use two servers: ("http://a.tile.openstreetmap.org/",
+			                   "http://b.tile.openstreetmap.org/")
+			 OpenCycleMaps: ("http://tile.opencyclemap.org/cycle/")
+
+ mapping.server:	 alias for mapping.servers
+
+ mapping.proxy:
+	type:		QString
+	default:	application global proxy settings
+	description:	http proxy used for network queries [host[:port]].
+			default port is 8080.
+
+ mapping.cache.directory:
+	type:		QString
+	default:	temporary directory
+	description:	Cache directory.
+
+ mapping.cache.size:
+	type:		long long (or QString)
+	default:	default QNetworkDiskCache cache size
+	description:	cache size, may be limited by the platform.
