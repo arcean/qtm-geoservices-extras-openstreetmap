@@ -7,7 +7,7 @@ include(../common.pri)
 
 QT += network
 
-CONFIG += mobility11
+CONFIG += mobility
 MOBILITY = location
 
 HEADERS += \
